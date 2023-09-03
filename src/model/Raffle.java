@@ -12,15 +12,15 @@ public class Raffle {
 
     private int totalWeight;
 
-    private PriorityQueue<Raffled> availablePrizes; //очередь разыгранных призов на выдачу
-    private ArrayList<Raffled> setOfPrizeForTheDrawling; // список призов для розыгрыша
+    protected PriorityQueue<Raffled> availablePrizes; //очередь разыгранных призов на выдачу
+    protected ArrayList<Raffled> setOfPrizeForTheDrawling; // список призов для розыгрыша
 
     /*
         Конструктор
      */
     public Raffle() {
-        this.availablePrizes = new PriorityQueue<Raffled>();
-        this.setOfPrizeForTheDrawling = new ArrayList<Raffled>();
+        this.availablePrizes = new PriorityQueue<>();
+        this.setOfPrizeForTheDrawling = new ArrayList<>();
         setTotalWeight();
     }
 
@@ -32,7 +32,7 @@ public class Raffle {
     public void draw(int count) throws RuntimeException {
         for (int i = 0; i < count; i++) {
             if (!this.setOfPrizeForTheDrawling.isEmpty()) {
-                ArrayList<Raffled> prizeStepTwo = new ArrayList<Raffled>();
+                ArrayList<Raffled> prizeStepTwo = new ArrayList<>();
                 boolean isDrawn = false;
                 while (!isDrawn) {
                     int stepOne = totalWeight - rnd.nextInt(totalWeight);

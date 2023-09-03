@@ -13,9 +13,7 @@ public class View {
             System.out.println();
         }
         Scanner scan = new Scanner(System.in, "cp1251");
-        String result = "";
-        result = scan.nextLine();
-
+        String result = scan.nextLine();
 
         if (menu.containsKey(result.charAt(0)))
             return result.charAt(0);
