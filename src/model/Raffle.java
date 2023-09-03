@@ -1,7 +1,5 @@
 package model;
 
-import model.impl.Toy;
-
 import java.util.*;
 
 public class Raffle {
@@ -76,7 +74,6 @@ public class Raffle {
 
     private void setTotalWeight() {
         this.totalWeight = 0;
-
 
         for (Raffled prize : this.setOfPrizeForTheDrawling) {
             int currWeight = prize.getWeight();
